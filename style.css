@@ -1,0 +1,218 @@
+body {
+      /*background-image: url('web.jpg');
+      background-size: cover;       /* Cover the whole screen */
+      background-position: center;  /* Center the image */
+      background-repeat: no-repeat; /* Do not repeat */
+      height: 100vh;                /* Full height */
+      margin: 0; 
+        
+                      /* Remove default margin */
+    }
+.logo{
+        width: 100px;                /* Set logo width */
+        height: auto;                /* Maintain aspect ratio */
+        position: absolute;          /* Position it absolutely */
+        top: 1px;                   /* Distance from the top */
+        left: 20px;                  /* Distance from the left */
+        font-family:sans-serif;
+        }
+header {
+            border-bottom: 2px solid rgb(50, 48, 48); /* Add a bottom border */
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;}
+
+nav ul {
+        list-style: none;
+        display: flex;
+        margin-left: 750px;
+        gap: 20px
+                        /* Align nav to the left */
+                /* Add padding to the top */
+        /* Add left margin to nav */
+    }
+    
+nav ul li a {
+        color: black;
+        text-decoration: none;
+        font-weight: 700;
+        left: 12px; /* Adjust left position */
+    }
+
+main{
+        padding: 180px;
+        margin:  auto; /* Center the main content */
+        max-width: 1200px; /* Set a maximum width for the main content */
+    
+}
+.expense {
+        gap: 20px;
+        margin-left: 244px; /* Add space between expense items */
+    }
+
+.bar-container {
+    font-size: 20px;
+    font-weight: bold; /* Make labels bold */
+    margin-left: 280px; /* Space below labels */
+    }  
+
+.savebutton{
+       
+        color: rgb(100, 94, 94); /* White text */
+        padding: 10px 20px; /* Padding for button */
+        border: none; /* Remove border */
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor on hover */
+        font-size: 16px; /* Font size for button text */
+    }
+    
+.savebutton:hover {
+        background-color: rgb(200, 200, 200); /* Light gray background on hover */
+        color: black; /* Change text color on hover */
+    }
+.save{
+    padding-left: 343px; /* Center the save button */
+    padding-top: 33px;
+}   
+.budgetsetting{
+    gap: 20px;
+
+}
+.budget{
+    width: 550px; /* Set width for budget input */
+    padding: 10px 20px; /* Padding inside the input */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for input text */
+    margin-left: 40px; /* Space between label and input */
+
+
+
+}
+.budgeting-rule{
+ border: 1px solid #333;       /* Dark border */
+ padding: 7px; 
+ height: 74px;              /* Space inside the box */
+ background-color: #d1c8c8;    /* Light background */
+ border-radius: 8px;           /* Optional: rounded corners */
+  margin: 50px auto;            /* Center horizontally */
+  box-shadow: 0 2px 6px rgb(124, 23, 23)}
+.custom-budgeting{
+    border:1px solid #333; /* Dark border */
+    padding: 7px;
+    border-radius: 7px;
+    margin: 2px auto; /* Center horizontally */
+
+
+}
+
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    ;
+}
+.settings-header { 
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+.settings-content1{
+    width: 559px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 70px;
+    border-radius: 10px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+.switch-row{
+    border-bottom: 1px solid #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.switch-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    max-width: 300px;
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: 0.3s;
+    border-radius: 24px;
+  }
+
+  .slider:before {
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+  }
+
+  input:checked + .slider {
+    background-color: #4caf50;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
