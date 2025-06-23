@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Buddy</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+      
+</head>
+<body>
+    
+   <main>
+
+        <h2 class="expense">Add Your Daily Expense Here</h2>
+        <form >
+        <div class ="bar-container">
+            <label for="Amount">Amount:</label>
+            <input type="number" id="Amount" name="Amount" min="1"  placeholder="ETB 0.00">
+        </div>
+           <br>
+           <div class="bar-container">
+             <label for="category">Category:</label>
+            <input list="categoryOptions" name="category" id="gender" placeholder="Select or type..." required />
+
+            <datalist id="categoryOptions">
+             <option value="Need">
+             <option value="Want">
+             <option value="Saving">
+            </datalist>
+        </div>
+           <br>
+           
+        <div class="bar-container">
+           <label for="Note">Note:</label>
+           <input type="text" id="Note" name="Note" >
+        </div>
+        </form>
+        <div class="save">
+        
+           <button class="savebutton" type="submit">Save</button>
+        </div>
+</body>
+</html>
