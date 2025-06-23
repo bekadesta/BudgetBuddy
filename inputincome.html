@@ -3,33 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Input Monthly Income</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="dashclass">
      <header>
-        <div>
-            <img src="#" alt="budgetbuddylogo">
+        <div class="logoss">
+            <img src="./Images/Budget-removebg-preview.png" alt="budgetbuddylogo">
         </div>
         <div>
-            <a href="#">Dashboard</a>
-            <a href="#">Tracking</a>
-            <a href="#">Budgets</a>
-            <a href="#">Reports</a>
-            <a href="#">Settings</a>
-        </div>
-        <div>
-            <img src="#" alt="account">
-        </div>
+        <nav >
+            <div class="navbar">
+                <ul>
+                <li><a href="Dashboard,html">Dashboard</a></li>
+                <li><a href="Tracking.html">Tracking</a></li>
+                <li><a href="Budgets.html">Budgets</a></li>
+                <li><a href="Reports.html">Reports</a></li>
+                <li><a href="settings.html">setting</a></li>
+                <li class="logos"><img src="./Images/user-solid.svg" alt=""></li>
+                </ul>
+            </div>
+        </nav>
     </header>
     <section>
-        <div>
+        <div class="inputsection" >
             <h2>What's your montly income?</h2>
+        <div class="input-group">
+            <input type="number" placeholder="ETB 0.00" id="">
         </div>
-        <div>
-            <input type="number" name="ETB 0.00" id="">
+        <div class="styled-button">
+            <a href="#">Next</a>
         </div>
-        <div>
-            <button>Next</button>
         </div>
     </section>
 </body>

@@ -309,3 +309,85 @@ nav ul li a:hover {
     border: 2px solid rgb(150, 173, 150);
     width: 800px;
 }
+
+/* input income section */
+
+.inputsection {
+    text-align: center;
+    font-size: larger;
+    margin-top: 180px;
+}
+
+.inputsection h2 {
+    margin-bottom: 30px;
+}
+.containerdaily {
+    width: 700px;
+    height: 500px;
+    margin-left: 400px;
+        border-radius: 10px;
+  box-shadow: 5px 10px 10px #B0BFB4
+}
+
+/* daily expense */
+.expense {
+        gap: 20px;
+        text-align: center;
+    }
+
+.bar-container {
+    font-size: 20px;
+    margin-left: 180px; 
+    margin-bottom: -10px;
+}  
+
+.styled-button2 a {
+  padding: 12px 24px;
+  margin-top: 80px;
+  margin-left: 300px;
+  background-color: #B0BFB4;
+  color: black;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+  display: inline-block;
+  text-align: center;
+}
+
+.containerforsettings {
+  width: 800px;
+  height: 630px;
+  margin-left: 350px;
+
+}
+.rule-box {
+  background-color: #B0BFB4 ;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 7px;
+}
+.custom-box {
+  background-color: #B0BFB4;
+  margin-bottom: 30px;
+  border-radius: 7px;
+}
+
+.input-group2 {
+  display: flex;
+  border-radius: 6px;
+  max-width: 420px; 
+  margin-bottom: 20px;
+  justify-content: space-evenly;
+}
+.input-group2 h4 {
+  margin-top: 5.7px;
+  font-weight: lighter;
+  margin-left: 24px;
+}
+.input-group2 input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
