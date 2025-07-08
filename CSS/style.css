@@ -242,53 +242,80 @@ nav ul li a:hover {
   font-weight: bold;
   margin-bottom: 10px;
 }
-.box-container {
-      display: flex;
+.box-containers {
+  display: flex;
   justify-content: center;
-  gap: 60px;
+  gap: 20px;
+  width: 500px;
+}
+
+.baby-box:hover {
+  background-color: #B0BFB4;
 }
 .baby-box {
-  width: 380px;
-  max-width: 98%;
-  height: 100px;
+  width: 1200px;
+  height: 110px;
   background-color: #E8EDF2;
   border: 1px solid #ccc;
   border-radius: 12px;
   font-size: medium;
+  cursor: pointer;
 }
+
 .baby-box h4 {
     text-align: center;
     margin-top: 30px;
-    margin-right: 10px;
 
 }
 .baby-box h3 {
     text-align: center;
     margin-top: -2px;
-    margin-right: 49px;
 
 }
 .boxes {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-right: 430px;
+  gap: 40px;
+  margin-right: 430px; /* adjust as needed */
 }
-
 .box {
+  position: relative;
   width: 60px;
-  height: 100px;
+  height: 150px;
   background-color: #e9eef2;
   border: 1px solid #ccc;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
 }
 
+.fill {
+  width: 100%;
+  background-color: #B0BFB4;
+  height: 0;
+  transition: height 1s ease-in-out;
+}
+
+.label {
+  margin-top: 8px;
+  font-weight: bold;
+  text-align: center;
+  width: 70px; 
+}
+
+
+.box-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .labels{
   display: flex;
   justify-content: center;
   gap: 40px;
   margin-top: 10px;
   font-weight: bold;
-  margin-right: 380px;
+  margin-right: 412px;
 }
 .container2{
   margin: 370px;

@@ -1,11 +1,10 @@
-<?php 
+<?php
 session_start();
-include 'db.php'; 
+include 'db.php';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = $_POST["email"] ?? '';
     $password = $_POST["password"] ?? '';
-
 
     $email = $conn->real_escape_string($email);
 
@@ -15,24 +14,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($result && $result->num_rows === 1) {
         $user = $result->fetch_assoc();
 
-      
         if (password_verify($password, $user["password"])) {
             $_SESSION["user_id"] = $user["id"];
-            $_SESSION["user_email"] = $user["email"];
             $_SESSION["fullname"] = $user["fullname"];
-
-            header("Location: dashboard.php");
+            header("Location: dashh.php");
             exit();
         } else {
             $error = "Invalid password.";
         }
     } else {
-        $error = "No account found with that email.";
+        $error = "No user found with that email.";
     }
 }
-
-
 ?>
+
 
 
 
@@ -56,12 +51,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <div class="panel left-panel">
             <h1>HELLO, BUDDY</h1>
             <p>Enter your personal details and start your journey with us!!</p>
-            <form action="dashboard.php" method="get">
             <button class="signupbtn" id="signUp" onclick="window.location.href='signup.php'">Sign Up</button>
         </div>
 
         <div class="panel right-panel">
-            <form method="POST" action="#">
+            <?php if (!empty($error)): ?>
+            <p style="color: red;"><?php echo $error; ?></p>
+            <?php endif; ?>
+
+            <form method="POST" action="signin.php">
                 <h1>Sign In to budget buddy</h1>
                 <div class="social-container">
                     <a href="https://www.instagram.com/" class="social"><i class="fab fa-instagram"></i></a>

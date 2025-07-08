@@ -1,6 +1,27 @@
 <?php
- 
+session_start();
+include 'db.php';
+
+if (!isset($_SESSION['user_id'])) {
+    header('Location: signin.php');
+    exit();
+}
+
+// Get fresh data from database
+$user_id = (int)$_SESSION['user_id'];
+$result = $conn->query("SELECT amount FROM income WHERE user_id = $user_id");
+
+$income = 0.00;
+if ($result && $result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $income = (float)$row['amount'];
+    $_SESSION['income'] = $income;
+}
+
+$totalSpending = 0.00;
+$remainingBudget = $income - $totalSpending;
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,9 +40,9 @@
         <nav >
             <div class="navbar">
                 <ul>
-                <li><a href="Dashboard,html">Dashboard</a></li>
-                <li><a href="Tracking.html">Tracking</a></li>
-                <li><a href="Budgets.html">Budgets</a></li>
+                <li><a href="dashboard.php">Dashboard</a></li>
+                <li><a href="dailyexpense.php">Tracking</a></li>
+                <li><a href="budgetset.php">Budgets</a></li>
                 <li><a href="Reports.html">Reports</a></li>
                 <li><a href="settings.html">setting</a></li>
                 <li class="logos"><img src="./Images/user-solid.svg" alt=""></li>
@@ -32,29 +53,38 @@
     </header>
     <section>
        <div class="container1">
+            <p>Welcome, <?php echo $_SESSION['fullname']; ?></p>
+
             <h2 class="title">
             Dashboard
             </h2>
+
+                        <?php if($income == 0): ?>
+                <div class="alert">
+                    <p>You haven't set your monthly income yet.</p>
+                    <a href="inputincome.php" class="btn">Set Income Now</a>
+                </div>
+            <?php endif; ?>
             <div class="box-container">
             <div class="baby-box">
                 <h4>Total Income</h4>
-                <h3>ETB 0.00</h3>
+                <h3>ETB<?php echo number_format($income, 2);?></h3>
             </div>
             <div class="baby-box">
                 <h4>Total Spending</h4>
-                <h3>ETB 0.00</h3>
+                <h3>ETB <?php echo number_format($totalSpending, 2); ?></h3>
             </div>
             <div class="baby-box">
                 <h4>Remaining Budget</h4>
-                <h3>ETB 0.00</h3>  
+                <h3>ETB <?php echo number_format($remainingBudget, 2); ?></h3>  
             </div>
             </div>
        </div>
         <div class="container2">
-            <h3>Spending Breakdown</h3>
+            <h3>Spending Breakdown</h3> 
             <div class="container3">
                 <div><h3>Spending By Category</h3></div>
-                <div><h3>ETB 0.00</h3></div>
+                <div><h3>ETB <?php echo number_format($totalSpending, 2); ?></h3></div>
                 <div>
                     <h3>This Month</h3>
                     <div class="boxes">
@@ -70,8 +100,7 @@
                 </div>
             </div>
             <div class="styled-button">
-                <a href="#">Input Montly Income</a>
-                <a href="inputincome.html">Input Montly Income</a>
+                <a href="inputincome.php">Input Montly Income</a>
             </div>
         </div>
 
