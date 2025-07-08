@@ -1,25 +1,38 @@
 <?php 
+session_start();
+include 'db.php'; 
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $email = $_POST["email"] ?? '';
+    $password = $_POST["password"] ?? '';
 
 
+    $email = $conn->real_escape_string($email);
 
+    $query = "SELECT * FROM users WHERE email = '$email'";
+    $result = $conn->query($query);
 
+    if ($result && $result->num_rows === 1) {
+        $user = $result->fetch_assoc();
 
+      
+        if (password_verify($password, $user["password"])) {
+            $_SESSION["user_id"] = $user["id"];
+            $_SESSION["user_email"] = $user["email"];
+            $_SESSION["fullname"] = $user["fullname"];
 
-
-
-
-
-
-
+            header("Location: dashboard.php");
+            exit();
+        } else {
+            $error = "Invalid password.";
+        }
+    } else {
+        $error = "No account found with that email.";
+    }
+}
 
 
 ?>
-
-
-
-
-
-
 
 
 
@@ -43,12 +56,12 @@
         <div class="panel left-panel">
             <h1>HELLO, BUDDY</h1>
             <p>Enter your personal details and start your journey with us!!</p>
-            <form action="signup.php" method="get">
+            <form action="dashboard.php" method="get">
             <button class="signupbtn" id="signUp" onclick="window.location.href='signup.php'">Sign Up</button>
         </div>
 
         <div class="panel right-panel">
-            <form action="#">
+            <form method="POST" action="#">
                 <h1>Sign In to budget buddy</h1>
                 <div class="social-container">
                     <a href="https://www.instagram.com/" class="social"><i class="fab fa-instagram"></i></a>
