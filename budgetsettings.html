@@ -3,26 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Budget Settings</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="dashclass">
      <header>
-        <div>
-            <img src="#" alt="budgetbuddylogo">
-        </div>
-        <div>
-            <a href="#">Dashboard</a>
-            <a href="#">Tracking</a>
-            <a href="#">Budgets</a>
-            <a href="#">Reports</a>
-            <a href="#">Settings</a>
-        </div>
-        <div>
-            <img src="#" alt="account">
-        </div>
+            <div  class="logoss">
+                <img src="./Images/Budget-removebg-preview.png" alt="">
+            </div>
+        <nav >
+            <div class="navbar">
+                <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="dailyexpense.html">Tracking</a></li>
+                <li><a href="Budgets.html">Budgets</a></li>
+                <li><a href="Reports.html">Reports</a></li>
+                <li><a href="budgetsettings.html">setting</a></li>
+                <li class="logos"><img src="./Images/user-solid.svg" alt=""></li>
+                </ul>
+            </div>
+        </nav>
     </header>
-    <section>
-        <div class="container">
+    <section class="containerforsettings">
+        <div>
             <h2>Budget Settings</h2>
 
             <h3>Budgeting Rule</h3>
@@ -37,26 +41,27 @@
                 <span>Customize your budget allocation percentages</span></p>
             </div>
 
-             <h3>Your Custom Budget Allocation</h3>
+            <h3>Your Custom Budget Allocation</h3>
 
-            <div class="inputs">
-                <div class="input-group">
-                <label for="needs">Needs (%)</label>
+            <div class="input-group2">
+                <label for="needs"><h4>Needs(%)</h4></label>
                 <input type="text" id="needs">
             </div>
-                <div class="input-group">
-                <label for="wants">Wants (%)</label>
+
+            <div class="input-group2">
+                <label for="wants"><h4>Wants(%)</h4></label>
+
                 <input type="text" id="wants">
             </div>
-         </div>
 
-        <div class="input-group full-width">
-             <label for="savings">Savings (%)</label>
-             <input type="text" id="savings">
+            <div class="input-group2">
+                <label for="savings"><h4>Savings(%)</h4></label>
+                <input type="text" id="savings">
+            </div>
+            <div class="styled-button2">
+                <a href="#">Save Changes</a>
+            </div>
         </div>
-
-         <button class="save-btn">Save Changes</button>
-    </div>
     </section>
 </body>
 </html>

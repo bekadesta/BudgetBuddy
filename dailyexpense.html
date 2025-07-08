@@ -3,40 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Daily Expense Tracker</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
-<body>
+<body class="dashclass">
      <header>
-        <div>
-            <img src="#" alt="budgetbuddylogo">
-        </div>
-        <div>
-            <a href="#">Dashboard</a>
-            <a href="#">Tracking</a>
-            <a href="#">Budgets</a>
-            <a href="#">Reports</a>
-            <a href="#">Settings</a>
-        </div>
-        <div>
-            <img src="#" alt="account">
-        </div>
+            <div  class="logoss">
+                <img src="./Images/Budget-removebg-preview.png" alt="">
+            </div>
+        <nav >
+            <div class="navbar">
+                <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="dailyexpense.html">Tracking</a></li>
+                <li><a href="Budgets.html">Budgets</a></li>
+                <li><a href="Reports.html">Reports</a></li>
+                <li><a href="budgetsettings.html">setting</a></li>
+                <li class="logos"><img src="./Images/user-solid.svg" alt=""></li>
+                </ul>
+            </div>
+        </nav>
+        
     </header>
-    <section>
-        <div><h3>Add your daily expense Here</h3></div>
-        <div>
-            <h3>Amount</h3>
-            <input type="number" name="ETB 0.00" id="">
+    <section class="containerdaily">
+        <h2 class="expense">Add Your Daily Expense Here</h2>
+        <form >
+        <div class ="input-group">
+            <input type="number" id="Amount" name="Amount" min="1"  placeholder="Amount you spent today">
         </div>
-        <div>
-            <h3>Category</h3>
-            <input type="text" name="Category" id="">
+           <br>
+           <div class="input-group">
+            <input list="categoryOptions" name="category" id="gender" placeholder="category of what you spent" required />
+
+            <datalist id="categoryOptions">
+             <option value="Need">
+             <option value="Want">
+             <option value="Saving">
+            </datalist>
         </div>
-        <div>
-            <h3>Note</h3>
-            <input type="text" name="Note" id="">
+           <br>
+        <div class="input-group">
+           <input type="text" id="Note" name="Note" placeholder="Things to remember" >
         </div>
-        <div>
-            <button>Save</button>
+        </form>
+        <div class="styled-button2" class="save">
+           <a href="#" type="submit">Save</a>
         </div>
     </section>
 </body>
