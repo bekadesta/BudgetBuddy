@@ -61,22 +61,23 @@ if ($budgetData && $budgetData->num_rows > 0) {
 <body class="dashclass">
      <header>
             <div  class="logoss">
-                <img src="./Images/Budget-removebg-preview.png" alt="">
+                <li style="list-style-type: none;">
+                    <a href="signin.php">
+                    <img src="./Images/Budget-removebg-preview.png" alt="">
+                </li>
             </div>
         <nav >
             <div class="navbar">
                 <ul>
-                <li><a href="dashboard.php">Dashboard</a></li>
+                <li><a href="dashh.php">Dashboard</a></li>
                 <li><a href="dailyexpense.php">Tracking</a></li>
                 <li><a href="budgetset.php" >Budgets</a></li>
-                <li><a href="Reports.html">Reports</a></li>
-                <li><a href="settings.html">setting</a></li>
-               <li class="logos"><a href="signin.php"><img src="./Images/user-solid.svg" alt="User Icon"></a></li>
-
+                <li><a href="report.php">Reports</a></li>
+                <li><a href="settings.php">Setting</a></li>
+               
                 </ul>
             </div>
-        </nav>
-        
+        </nav>    
     </header>
     <section>
        <div class="container1">

@@ -61,16 +61,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['income'])) {
 </head>
 <body class="dashclass">
      <header>
-        <div class="logoss">
-            <img src="./Images/Budget-removebg-preview.png" alt="budgetbuddylogo">
-        </div>
+            <div  class="logoss">
+                <li style="list-style-type: none;">
+                    <a href="signin.php">
+                    <img src="./Images/Budget-removebg-preview.png" alt="">
+                </li>
+            </div>
         <div>
         <nav >
             <div class="navbar">
                 <ul>
                 <li><a href="dashh.php">Dashboard</a></li>
                 <li><a href="Tracking.html">Tracking</a></li>
-                <li><a href="Budgets.html">Budgets</a></li>
+                <li><a href="budgetset.php">Budgets</a></li>
                 <li><a href="Reports.html">Reports</a></li>
                 <li><a href="settings.html">setting</a></li>
                 <li class="logos"><img src="./Images/user-solid.svg" alt=""></li>

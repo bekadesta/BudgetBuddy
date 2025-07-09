@@ -39,7 +39,7 @@ require 'budget.php';
                 <div class="social-containers">
                     <a href="https://www.instagram.com/" class="social"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.linkedin.com/" class="social"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google"></i></a>
+                    <a href="https://myaccount.google.com/" class="social"><i class="fab fa-google"></i></a>
                 </div>
                 <span>or use your email for registration</span>
 

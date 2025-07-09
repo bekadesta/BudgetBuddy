@@ -58,17 +58,7 @@ body {
     color: #333;
 }
 
-.overlay-container {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 100;
-    border-radius: 15px; 
-    background-color: pink;
-}
+
 
 .left-panel p {
     font-size: 14px;
@@ -427,7 +417,14 @@ button:focus {
     margin: 20px 0 30px;
     color: #555;
 }
-
+.report-container div{
+    width: 100%;
+    max-width: 1200px;
+    background-color: #681818; /* Light background for the report container */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .container {

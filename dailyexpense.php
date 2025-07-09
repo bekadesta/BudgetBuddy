@@ -57,17 +57,20 @@ if ($result && $row = $result->fetch_assoc()) {
 </head>
 <body class="dashclass">
     <header>
-        <div class="logoss">
-            <img src="./Images/Budget-removebg-preview.png" alt="Budget Buddy Logo" />
-        </div>
+            <div  class="logoss">
+                <li style="list-style-type: none;">
+                    <a href="signin.php">
+                    <img src="./Images/Budget-removebg-preview.png" alt="">
+                </li>
+            </div>
         <nav>
             <div class="navbar">
                 <ul>
                     <li><a href="dashh.php">Dashboard</a></li>
                     <li><a href="dailyexpense.php">Tracking</a></li>
                     <li><a href="budgetset.php">Budgets</a></li>
-                    <li><a href="Reports.php">Reports</a></li>
-                    <li><a href="budgetsettings.php">Settings</a></li>
+                    <li><a href="report.php">Reports</a></li>
+                    <li><a href="settings.php">Settings</a></li>
                     <li class="logos"><img src="./Images/user-solid.svg" alt="User Icon" /></li>
                 </ul>
             </div>
